@@ -4,9 +4,6 @@
   <br>
 </h1>
 
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=react,typescript,css,github" alt="Tech Stack" width="170">
-</div>
 
 <p align="center">
   A sleek, intuitive task manager for organizing your daily to-dos with ease. Built with React Native, Expo, TypeScript, and Convex.
