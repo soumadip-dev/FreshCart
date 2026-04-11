@@ -1,57 +1,56 @@
 <h1 align="center">
   <br>
-  TODO APP 📝
+  GROCERY LIST APP 🛒
   <br>
 </h1>
 
-
 <p align="center">
-  A sleek, intuitive task manager for organizing your daily to-dos with ease. Built with React Native, Expo, TypeScript, and Convex.
+  A full-featured grocery management app with authentication, real-time updates, and insightful analytics. Built with React Native, Expo, Clerk, PostgreSQL, and Drizzle ORM.
 </p>
 
 <div align="center">
+  <img src="https://raw.githubusercontent.com/burakorkmez/grocify-expo/master/assets/images/screenshot-for-readme.png" alt="Banner" width="900">
+</div
 
-| TODO Tab                                                                    | Settings Tab                                                                   |
-| --------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| <img src="./assets/images/todo.jpg" alt="Task List Screenshot" width="400"> | <img src="./assets/images/settings.jpg" alt="Settings Screenshot" width="400"> |
+## 🔋 Features
 
-</div>
+- 🔐 **Authentication** – Secure login with Google, Apple & GitHub via Clerk.
+- 📝 **Planner Screen** – Add new grocery items to your list.
+- ✅ **Mark as Purchased** – Toggle item completion status with check functionality.
+- 🔢 **Update Quantities** – Adjust item quantities on the fly.
+- 🗑️ **Delete Items** – Remove individual items from the list.
+- 🧹 **Clear Completed** – Delete all purchased items with a single button.
+- 📊 **Insights Dashboard** – View profile information and usage analytics.
+- 🚪 **Secure Logout** – Fully protected logout flow.
+- 💬 **User Feedback** – Built-in button to collect feature suggestions & bug reports.
+- 🎨 **Liquid Glass Tab Effect** – iOS-style native tab bar with modern visual effects.
 
+## ⚙️ Tech Stack & Architecture
 
-## ✨ Features
+- **Frontend**: React Native with Expo – cross-platform mobile app (iOS & Android).
+- **Authentication**: Clerk – handles Google, Apple, and GitHub login.
+- **Backend & Database**: PostgreSQL hosted on Neon – persistent cloud database.
+- **ORM**: Drizzle ORM – type-safe database queries.
+- **Styling**: NativeWind (TailwindCSS for React Native).
+- **Navigation**: Expo Native Tabs – liquid glass iOS tab effect.
+- **State Management**: Zustand – global state management.
+- **Error Monitoring**: Sentry – optional error tracking.
 
-- ➕ **Add Tasks** – Easily add new tasks to your list.
-- 📝 **Edit Tasks** – Modify existing tasks with a simple tap.
-- ❌ **Delete Tasks** – Remove individual tasks as needed.
-- 🧹 **Delete All Tasks** – Clear the entire list with one click.
-- ✅ **Toggle Completion** – Mark tasks as complete or incomplete.
-- 📊 **Completion Indicator** – View the percentage of completed tasks in real time.
-- 🌗 **Theme Toggle** – Switch between light and dark modes for better accessibility.
-
-## 🛠 Tech Stack & Architecture
-
-- **Frontend**: React Native with Expo – for a fast and responsive mobile experience.
-- **Backend**: [Convex](https://www.convex.dev) – Handles business logic and API endpoints.
-- **Database**: Convex – Built-in real-time NoSQL database.
-- **Styling**: CSS
-- **State Management**: React Context API
-
-
-## 🚀 Quick Start
+## 🤸 Quick Start
 
 ### Prerequisites
 
 - Node.js (v16+)
 - Expo CLI installed globally (`npm install -g expo-cli`)
-- Convex CLI (`npm install -g convex`)
+- PostgreSQL database (Neon provides a free tier)
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/soumadip-dev/todo-app.git
-   cd todo-app
+   git clone https://github.com/yourusername/grocery-list-app.git
+   cd grocery-list-app
    ```
 
 2. Install dependencies:
@@ -60,18 +59,26 @@
    npm install
    ```
 
-3. Start the development environment:
+3. Set up environment variables:
 
-   ```bash
-   npx convex dev
-   npx expo start
+   Create a `.env` file in the root directory and add:
+
+   ```env
+   DATABASE_URL=your_db_url
+   EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+   EXPO_PUBLIC_SENTRY_DSN=your_sentry_dsn
+   SENTRY_AUTH_TOKEN=your_sentry_auth_token
    ```
 
-4. Scan the QR code with the Expo Go app (iOS/Android) or use an emulator.
+4. Start the development environment:
 
+   ```bash
+   npx expo run:ios    # For iOS
+   # OR
+   npx expo run:android # For Android
+   ```
 
 ## 📱 Platform Support
 
 - iOS
 - Android
-
