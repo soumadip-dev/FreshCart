@@ -1,5 +1,5 @@
 import { Show, useClerk, useUser } from '@clerk/expo';
-import { UserButton, UserProfileView } from '@clerk/expo/native';
+import { UserButton } from '@clerk/expo/native';
 import { Pressable, StyleSheet, Text, View } from 'react-native';
 
 export default function Page() {
@@ -17,7 +17,7 @@ export default function Page() {
         <View style={{ width: 36, height: 36, borderRadius: 18, overflow: 'hidden' }}>
           <UserButton />
         </View>
-        <UserProfileView style={{ flex: 1 }} />
+        {/* <UserProfileView style={{ flex: 1 }} /> */}
       </Show>
     </View>
   );
