@@ -1,4 +1,3 @@
-import { Alert } from 'react-native';
 import { create } from 'zustand';
 
 export type GroceryCategory = 'Produce' | 'Dairy' | 'Bakery' | 'Pantry' | 'Snacks';
@@ -40,7 +39,6 @@ const useGroceryStore = create<GroceryState>((set, get) => ({
   error: null,
 
   loadItems: async () => {
-    Alert.alert('Loading items...', 'Fetching your grocery list.');
     set({ isLoading: true, error: null });
     try {
       const res = await fetch('/api/items');
