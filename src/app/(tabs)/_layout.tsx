@@ -1,14 +1,22 @@
+import useGroceryStore from '@/store/grocery-store';
 import { useAuth } from '@clerk/expo';
 import { Redirect } from 'expo-router';
 import { NativeTabs } from 'expo-router/unstable-native-tabs';
 import { useColorScheme } from 'nativewind';
+import { useEffect } from 'react';
 
 export default function TabsLayout() {
   const { isSignedIn, isLoaded } = useAuth();
 
+  const { loadItems, items } = useGroceryStore();
+
   const { colorScheme } = useColorScheme();
   const isDark = colorScheme === 'dark';
   const tabTintColor = isDark ? 'hsl(142 70% 54%)' : 'hsl(147 75% 33%)';
+
+  useEffect(() => {
+    loadItems();
+  }, []);
 
   if (!isLoaded) {
     return null;
@@ -27,7 +35,7 @@ export default function TabsLayout() {
             default: 'list.bullet.clipboard',
             selected: 'list.bullet.clipboard.fill',
           }}
-          md="format_list_bulleted"
+          md="list"
         />
       </NativeTabs.Trigger>
 
