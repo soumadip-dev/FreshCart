@@ -10,15 +10,11 @@ const ListHeroCard = () => {
 
   return (
     <View className="rounded-3xl bg-primary p-5">
-      <Text className="text-sm font-semibold uppercase tracking-[1px] text-primary-foreground/70">
-        Today
-      </Text>
+      <Text className="text-sm font-semibold uppercase tracking-[1px] text-secondary">Today</Text>
 
-      <Text className="mt-1 text-3xl font-extrabold text-primary-foreground">
-        Your Grocery Board
-      </Text>
+      <Text className="mt-1 text-3xl font-extrabold text-secondary">Your Grocery Board</Text>
 
-      <Text className="mt-1 text-sm text-primary-foreground/80">
+      <Text className="mt-1 text-sm text-secondary">
         {pendingCount} pending · {completedCount} completed
       </Text>
 
